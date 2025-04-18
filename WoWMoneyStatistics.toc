@@ -1,0 +1,32 @@
+## Interface: 110000, 110002
+## Title: WoW Money Statistics
+## Notes: View statistics on gold usage
+## Version: 2.3.4
+## Author: R y - US-Hyjal
+## SavedVariablesPerCharacter: WOWMMChar, WOWMSZoneLoot
+## SavedVariables: WOWMMGlobal, WOWMSTracker, WOWMSZone, WOWMSProfile, WOWMSDebug
+## OptionalDeps: MBB, SexyMap, ElvUI
+
+Globals.lua
+
+embed.xml
+
+skin\!Functions.lua
+Utility.lua
+Profiles.lua
+TimeUtility.lua
+Core.lua
+WoWToken.lua
+SlashCmd.lua
+Tooltip.lua
+ContextMenu.lua
+LDB.lua
+Minimap.lua
+Tracker.lua
+trackers\embed.xml
+StatDisplay.lua
+Debug.lua
+
+#@debug@
+# __tests/embed.xml
+#@end-debug@

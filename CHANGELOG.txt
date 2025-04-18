@@ -1,0 +1,259 @@
+v2.3.3
+- Updated version of LibDropDownMenu to 4.0 to resolve issues with conflicts
+with WeakAuras
+
+v2.3.2
+- Updates for DF
+
+v2.3.1-a02
+- Fix Issue #1 - Sending money through mail with TSM incorrectly categorizes money as postage
+
+v2.3.0
+- Fixed stutter when viewing tooltip.
+
+v2.2.9
+- Fixed issues with tables for pie chart displays.
+
+v2.2.8
+- Added additional options around configuring tooltip for time based display.
+- Items obtained from loot or quests will, when sold to a vendor, specify the correct zone they were obtained in.
+- Fixed logic around weekly reset.
+- Fixed issues around new installations.
+
+v2.2.7
+- Fix an issue with faction only view.
+- Add additional protections around weekly reset in attempt to keep it from
+resetting incorrectly.
+
+v2.2.6
+- Fix nil reference with sexyMap integration
+
+v2.2.5
+- Added ability to make profiles
+- Added ability to invert time based display
+- Added Grand Empress Shek'zara to World Boss list
+- Added Vuk'laz the Earthbreaker to World Boss list
+- Fixed an issue with World Boss quest detection
+- Fixed an issue with server totals and faction only view
+- Add cleanup to reset alt money transfer if you have no mail
+
+v2.2.4
+- Fix Currencies on tooltip.
+
+v2.2.3
+- Fix Currencies on summary tab.
+
+v2.2.2
+- Update for WoW 9.0
+- Remove the feature to store debug information on error.
+
+v2.2.1
+- Update debug information to only save a day after an error.
+- Minor work on vendor purchase detection.
+- Work on resolving issues with auction house sales in the mail.
+- Added World Boss detection.
+
+v2.2.0
+- Fixed an issue where older database formats would cause issues with realm
+cash calculations
+- Reverted back a change to ensure we always count gains and loses of money
+even if we don't know where it came from
+- Timestamping debug information for a clearer picture of what happened when
+- Added an unknown tracker for the few instances where we just can't figure
+out where the money came from.
+- Minor tweaks to the Tracker logic to ensure we handle bag items and quests
+correctly
+
+v2.1.9
+- Fixed an issue where the blizzard api could return nil values for bag item
+information
+
+v2.1.8
+- Fixed an issue where I was referencing a nil value due to poor conditional
+logic.
+
+v2.1.7
+- Fixed an issue where time based faction information would not reset at the
+appropriate time
+- Removed time based update if we do not find a category for a transaction
+- Added debug information to be saved on a day by day basis
+
+v2.1.6
+- Added Money Format Options
+- Added Faction Only View
+
+v2.1.5
+- Removed unwanted slash command when MBB is loaded
+- Added protection around currency display
+
+v2.1.4
+- Added a new menu item to specify your current character is a Bank Character
+- Added a new menu for controlling how Alt Money Transfers appear on the tooltip
+- Fixed a bug where if you were ignoring alt transfers then the character,
+server and total sections of the tooltip were incorrect
+- Fixed a bug where if you had transfered money to an alt the indicator would go
+away if you partially retreived all the money from the mailbox
+
+v2.1.3
+- Fixed an issue where Time based data could get reset when logging in
+- Fixed an issue where the user could not reset a tracker on a character
+- Added the ability to reset zone information
+
+v2.1.2
+- Added MinimapButtonBar functionality
+- Added tracking for earned spent and net by zone
+- Added tracking for bank tab and reagent tab purchases
+- Added tracking for LFG rewards
+- Fixed several issues with trackers not working properly
+- Fixed nil 'bagValue' issue
+
+v2.1.1
+- Work on trying to eliminate as many unknown currency sources as possible.
+- Added ability to show All, Current Character Only, and None of the Characters
+and Servers information in the tooltip.
+
+v2.1.0
+- Added tracking of money spent at the barber
+
+- Added tracking of money coming from several cache or bag items
+- Money from the following items should now be tracked as LOOT
+-- Fel-Touched Pet Supplies
+-- Damp Pet Supplies
+-- Mr. Smite's Supplies
+-- Unopened Gnomeregan Supply Box
+-- Big Bag of Pet Supplies
+-- Traveler's Pet Supplies
+-- Pet Supplies
+-- Leprous Sack of Pet Supplies
+-- Torn Sack of Pet Supplies
+-- Brawler's Pet Supplies
+-- Fabled Pandaren Pet Supplies
+-- Pandaren Spirit Pet Supplies (Burning)
+-- Pandaren Spirit Pet Supplies (Flowing)
+-- Pandaren Spirit Pet Supplies (Whispering)
+-- Pandaren Spirit Pet Supplies (Thundering)
+-- Farondis Chest
+-- Dreamweaver Cache
+-- Highmountain Supplies
+-- Nightfallen Cache
+-- Valarjar Strongbox
+-- Warden's Supply Kit
+-- Legionfall Chest
+-- Brittle Krokul Chest
+-- Gleaming Footlocker
+-- Dreamweaver Provisions
+-- Highmountain Tribute
+-- Valarjar Cache
+-- Farondis Lockbox
+-- Nightfallen Hoard
+-- Warden's Field Kit
+-- Kirin Tor Chest
+-- Gilded Trunk
+-- Legionfall Spoils
+-- Scuffed Krokul Cache
+-- Tortollan Seekers Supplies
+-- Talanji's Expedition Supplies
+-- Voldunai Supplies
+-- Zandalari Empire Supplies
+-- Storm's Wake Supplies
+-- Proudmoore Admiralty Supplies
+-- Order of Embers Supplies
+-- Champions of Azeroth Supplies
+-- Honorbound Supplies
+-- 7th Legion Supplies
+-- Mystery Bag
+-- Heroic Cache of Treasures
+-- Bulging Heroic Cache of Treasures
+
+- Updated LibUIDropDownMenu to the latest and greatest version
+
+v2.0.0.5
+- Added the ability to turn on debug messages
+
+v2.0.0.4
+- Fixed an issue with MailTracker trying to increment a nil value.
+- Got Guild Repairs working correctly.  Should now correctly determine if
+money from the guild bank was used for repairs and ignore the transaction.
+
+v2.0.0.3
+- Fixed a bug where utilities were not included in the proper files.
+
+v2.0.0.2
+- Fixed an issue where alt transactions were accounted for in earning and
+spending
+- Fixed several minor bugs
+- Added a slash command for allowing alt transactions to be accounted for
+- Added a slash command for displaying text when a transaction occurs
+- Added an indicator on the tooltip to show where the user sent money to an
+alt
+
+v2.0.0.1
+- Fixed an issue where if the user had ElvUI Font selected and then unloaded
+ElvUI the tooltip would not show and an error was produced.
+- Fixed an issue where I was indexing into a table that was nil.
+
+v2.0.0.0
+- Fixed an issue where a lua error would occur if you logged onto another realm.
+- Updates to the weekly reset logic.  Weekly reset should be happening at the
+correct time for the region the user is in (For US and EU only).  Korean,
+Taiwanese and Chinese regions are set to reset on Tuesday at midnight UTC.
+I will update to the appropriate reset time if I ever figure out what time those regions do a
+weekly reset.
+- When removing a character the menu now correctly closes.
+- Menu rework.
+- Added Money Catagories to show where money is going to and coming from.
+- Added /wms show which will bring the new dialog for summary and money
+catagory data up.
+- Doing any reset will now prompt the user to ensure they really want to do
+the reset.
+- Fixed an issue that was causing SexyMap integration to stop working.
+- A bit more reorg.
+
+v1.0.7.1
+- Modifications from a branch got into my release for v1.0.7, fixing this.
+
+v1.0.7
+- Update for WoW 8.0.1
+- Removal of an event that is no more.
+- Switch to use new Calendar API.
+- Recursive debugPrintTable.
+- A bit more reorg.
+
+v1.0.6.1
+- Fixed an issue that was causing Session data to reset on any loading screen.
+
+v1.0.6
+- Fixed an issue, reported by jaded2012, where data would get reset if CalendarGetDate returned the wrong
+date. (This issue was caused by calling CalendarGetDate too early)
+- Added Watched Currency feature.
+- Fixed minor bugs resulting from code reorg.
+
+v1.0.5.1
+- Fixing an issue with the default font.
+- Fixing an issue with removing a character.
+
+v1.0.5:
+- Fixing an issue with a nil value for day of the week.
+
+v1.0.4:
+- Added SexyMap functionality.
+- Reworked Slash Command functionality.  Added SexyMap Slash Command.
+- General code reorganization.
+
+v1.0.3:
+- Added LDB functionality.
+- Fixed a font issue where a font was not loading correctly.
+- Added Wow Token Price display option.
+- Added two slash commands:
+   "/wms minimap show" - Show the minimap icon
+   "/wms minimap hide" - Hide the minimap icon
+
+v1.0.2:
+- Added Week (Resets on Tuesdays), Month and Year (Cause why not).
+- Made a change to reset logic to not recursively clear data.  IE Resetting Month does not reset Week, Day and Session anymore.
+
+v1.0.1:
+- Fixed an issue reported by gritchu where the minimap icon would not stay where it was placed through reboots.
+
+v1.0.0:
+- Initial Release

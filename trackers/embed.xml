@@ -1,0 +1,11 @@
+<Ui xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+   <Script file="LootTracker.lua"/>
+   <Script file="BagTracker.lua"/>
+   <Script file="BankTracker.lua"/>
+   <Script file="GuildBankTracker.lua"/>
+   <Script file="LFGTracker.lua"/>
+   <Script file="MerchantTracker.lua"/>
+   <Script file="MailTracker.lua"/>
+   <Script file="QuestTracker.lua"/>
+   <Script file="MiscellanousTracker.lua"/>
+</Ui>
